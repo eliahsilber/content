@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dreieck</title>
+<meta name="author" content="MaxiMerkel">
+<meta name="editor" content="html-editor phase 5">
+
+<script language="JavaScript">
+<!--
+function dreieck()
+ {
+ var a,b,c,A,s,u;
+ a=prompt("Bitte geben sie Seite a ein","");
+ a=parseFloat(a);
+ b=prompt("Bitte geben sie Seite b ein","");
+ b=parseFloat(b);
+ c=prompt("Bitte geben sie Seite c ein","");
+ c=parseFloat(c);
+ u=a+b+c;
+ s=u/2;
+ A=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+ document.write("Flächeninhalt=",A, "  <br> ");
+ document.write("Umfang=",u);
+ }
+//-->
+</script>
+<noscript></noscript>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body onLoad="dreieck()" text="#000000" bgcolor="#FFFFFF" link="#FF0000" alink="#FF0000" vlink="#FF0000">
+
+</body>
+</html>
