@@ -1,8 +1,0 @@
-# Darstellung eines Würfels mit der Kantenlänge 2. Der Mittelpunkt der Grundfläche befindet sich im Ursprung.
-# Ergänzen Sie die Liste der Eckpunkte.
-Q:Quader(0, 0, 0, 2, 2, 2);3;true;false
-A:Punkt(-1, -1, 0);6;true;true
-B:Punkt(1, -1, 0);6;true;true
-C:Punkt(1, 1, 0);6;true;true
-D:Punkt(-1, 1, 0);6;true;true
-H:Punkt(-1, 1, 2);6;true;true
