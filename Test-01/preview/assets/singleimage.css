@@ -1,0 +1,33 @@
+﻿/*! $Id: singleimage.less 69012 2018-11-14 12:49:25Z sseiz $ */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L5 */
+.zpwBild {
+  overflow: hidden;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L9 */
+.zpImageGallery[data-kind='singleimage'] > a.fancybox.svg {
+  display: inline !important;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L12 */
+.zpImageGallery[data-kind='singleimage'] > a.fancybox.svg img {
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L17 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L18 */
+.zpImageGallery[data-kind='singleimage'] img.zoomImg:hover {
+  cursor: zoom-in;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L21 */
+.zpImageGallery[data-kind='singleimage'] img.zoomImg.zoomed:hover {
+  cursor: all-scroll;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L26 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L27 */
+.ie .zpImageGallery[data-kind='singleimage'] img.zoomImg:hover {
+  cursor: pointer;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\widgets\singleimage\singleimage.less:L32 */
+.zpwBild > a.zpnolayoutlinkstyles {
+  display: inline-block;
+  max-width: 100%;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML> <html class="no-js responsivelayout" lang="de" data-zpdebug="false" data-ptr=""> <head> <script>
+		document.documentElement.className = document.documentElement.className.replace(/no-js/g, 'js');
+	</script> <title>Kontakt</title> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="generator" content="Zeta Producer 15.3.0.0, ZP15F, 06.04.2020 19:08:02"> <meta name="robots" content="index, follow"> <script>
+		// if after 1000ms we haven't got webfonts, show the user something, a FOUT is better than nothing
+		// http://kevindew.me/post/47052453532/a-fallback-for-when-google-web-font-loader-fails
+		setTimeout(function() {
+			// you can have the webfont.js cached but still have no classes fire and you will have a window.WebFontConfig object
+			if ( ! ("WebFont" in window)) {
+				// non wfl loader class name because their events could still fire
+				document.getElementsByTagName("html")[0].className += " wf-fail";
+			}
+		}, 1000);
+	
+		WebFontConfig = {
+			google: { families: [ 'Roboto:300,400,700' ] }
+		};
+	</script> <script src="assets/js/webfont/1.6.28/webfont.js"></script> <noscript> <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,700"> </noscript> <link rel="stylesheet" type="text/css" href="assets/bundle.css?v=637224005846803940"> <link rel="stylesheet" type="text/css" href="assets/bundle-print.css?v=637224004111813315" media="print"> <style>
+#a1538.zpwButton p{text-align: left;}
+
+</style> <script type="text/javascript" src="assets/bundle.js?v=637224005846803940"></script> </head> <body id="locus-responsive" class="notouch nologo"> <a id="top"></a> <div id="wrapper" class="container"> <div id="header"> <div class="topline"> <div id="webdescription"> <div id="webtext"> <div id="webname"><a href="index.html">Cotta-Abizeitung</a></div> <div id="slogan">Jahrgang 2021</div> </div> </div> </div> <div id="nav"> <ul class="zpmarkactive default submenu touchhovermenu clickhovermenu out" data-trianglemode="true"><li class="zpnodefaults"><a href="index.html">Startseite</a></li><li class="zpnodefaults"><a class="active" href="kontakt.html">Kontakt</a></li><li class="zpnodefaults"><a href="impressum.html">Impressum</a></li><li class="overflownonly"><a href="#" id="mobilenavtoggle" class="tabletonly toggle" aria-label="Menü ein-/ausblenden">&#9776; Menü</a></li></ul> <script>
+$z(document).ready(function(){
+	// we find the active page's a-tag and then walk upwards the dom marking the respective parent li as active/open
+	$z('ul.zpmarkactive.default li a.active').parents('li').each(function(index){
+		var that = this;
+		// do not add open class to immediate parent li
+		if ( index > 0 ){
+			$z(that).addClass('open');
+		}
+		$z(that).addClass('active');
+		//$z(that).find('> a').addClass('active');
+	});
+	$z("ul.zpmarkactive.default").removeClass("zpmarkactive");
+	
+	/*
+	$z("ul.zpmarkactive.default li:has(a.active)").addClass("active");
+	$z("ul.zpmarkactive.default li.haschilds > a").addClass("haschilds");
+	$z("ul.zpmarkactive.default li.haschilds:has(a.active)").addClass("active");
+	$z("ul.zpmarkactive.default li.active > a").addClass("active");
+	
+	$z("ul.zpmarkactive.default").removeClass("zpmarkactive")
+	*/
+});
+</script> </div> </div> <div id="slider" class="noprint"> <a id="a1534"></a> <div id="headerslider" class="flexslider"> <div class="flex-container"> <ul class="slides"> <li> <img src="media/images/image-placeholder-header-neg-large.png" alt=""> <div class="flex-caption"> <h2 style="">Kopfgrafik</h2> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ultrices arcu, sagittis pharetra ligula pretium bibendum. </p> </div> </li> </ul> </div> </div> <script>
+		$z(document).ready(function() {
+			var useCssAnimation = true;
+			if ( $z.browser.safari ){
+				useCssAnimation = false;
+			}
+			var autoplay = true;
+			if ( $z("body").hasClass("zpreducemotion") && 'slide' !== 'fade' ){  // don't allow moving animations
+				autoplay = false;
+			}
+			
+			function initSlider(){
+				$z('#headerslider .flex-container').flexslider({
+					useCSS: useCssAnimation,
+					touch: true,
+					keyboard: true,
+					itemMargin: 0,
+					animation: 'slide',
+					controlsContainer: '#headerslider.flexslider',
+					slideshow: autoplay,
+					slideshowSpeed: 7000,
+					
+					
+					
+					
+					pauseOnHover: true,
+					smoothHeight: true,
+					prevText: "zur&#252;ck",
+					nextText: "weiter"
+				});
+			}
+			
+			if ( $z('#headerslider .flex-container ul.slides li img').length > 0 ){
+				// init flexslider after 1st image has loaded, so have dimensions as quickly as possible without having to wait too long on window loaded or such and can start right with doc ready
+				$z('#headerslider .flex-container ul.slides li img').first().one("load", initSlider).each(function() {
+					if(this.complete) $z(this).trigger('load');
+				}); // .each() is to work around a browser bugs which don't fire load() for cached images http://stackoverflow.com/a/3877079
+			}
+			else{
+				// also init flexslider if it doesn't contain images and is text only
+				initSlider();
+			}
+			
+			// activate links for individual slideshow
+			$z('#headerslider .flex-container ul.slides li[data-clickurl]').css("cursor","pointer");
+			$z('#headerslider .flex-container ul.slides li[data-clickurl]').click(function (event){
+				// Because this script captures clicks for a container, it will also fire when a regular link inside the container 
+				// is clicked. Therefore, we check below, if a regular link i.e. <a href="#"> was the target of the click.
+				// Depending on the browser used, event.target might not be available, but event.srcElement would…
+				var targ;
+				if (event.target){
+					targ = event.target;
+				}
+				else if (event.srcElement) {
+					targ = event.srcElement;
+				}
+				if (targ.nodeName == "A") {
+					// a regular link i.e. in a Caption was clicked. Return early, so the link's href doesn't get overridden
+					return;
+				}
+				
+				if ( $z(this).data("clicktarget") ){
+					window.open($z(this).data("clickurl"), $z(this).data("clicktarget"));
+				}
+				else{
+					window.location = $z(this).data("clickurl");
+				}
+				event.preventDefault;
+				return false;
+			});
+		});
+  	</script> </div> <div id="content" class="main style1 rounded"> <div class="zparea zpgrid" data-numcolumns="" data-areaname="Standard" data-pageid="544"> <div id="container_119" class="zpContainer first last " data-zpeleel="container" data-zpleid="119"> <div class="zpRow standard " data-row-id="201"> <div class="zpColumn odd zpColumnWidth1 c12 first last" style=" " data-column-id="218"> <div class="zpColumnItem"> <div id="a1535" data-article-id="1535" data-zpleid="1535" class="articlearea zpwText"> <h1 style="text-align:left;" data-zpfieldname="headline">Ihre Mitteilung an uns</h1> <p>Hier können Sie Ihre Adresse und ein Kontaktformular einfügen.</p> </div> </div> </div> </div> <div class="zpRow standard " data-row-id="202"> <div class="zpColumn odd zpColumnWidth2 c8 first" style=" " data-column-id="219"> <div class="zpColumnItem"> <div id="a1536" data-article-id="1536" data-zpleid="1536" class="articlearea zpwFormular"> <noscript> <div class="formvalidateerror" style="color: #fff; background-color: red; padding: 6px 12px;"> <p><strong>Um das Kontaktformular zu nutzen, aktivieren Sie bitte JavaScript!</strong></p> <p><strong>In order to use this form, you need to activate JavaScript!</strong></p> </div> </noscript> <form enctype="multipart/form-data" class="zp-form zp-editable zp14 autohidelabels zpgrid" data-numcolumns="12" data-usesmtp="no" id="form1536" name="form1536" action="assets/php/formmailer/SendEmail.php?sc" method="post"> <input type="hidden" name="f_receiver" value="MnNuM+WvvqJiFHfRswZ0Mhk2iaispZmP"> <input type="hidden" name="f_title" value="Nachricht über Kontaktformular"> <input type="hidden" name="f_success" value="https://hosting.zeta-producer.com/6612317808/nachricht-erfolgreich-gesendet.html"> <input type="hidden" name="f_error" value="https://hosting.zeta-producer.com/6612317808/nachricht-konnte-nicht-versendet-werden.html"> <input type="hidden" name="f_id" value="1536"> <input type="hidden" name="f_alertPrefix" value="Bitte f&#252;llen Sie die rot markierten Felder aus:"> <input type="hidden" name="f_invalidEmailMsg" value="keine g&#252;ltige E-Mail"> <input type="hidden" name="NAME1" id="NAME1" value="Name"> <div class="resizablefield c12 fieldinnewline "> <label for="F1" class="field">Name</label> <input class="typetext required" type="text" name="F1" id="F1" placeholder="Name" value="" style=""> </div> <input type="hidden" name="NAME2" id="NAME2" value="E-Mail"> <div class="resizablefield c12 fieldinnewline "> <label for="F2" class="field">E-Mail</label> <input class="typetext required" type="email" name="F2" id="F2" placeholder="E-Mail" value="" style=""> </div> <input type="hidden" name="NAME3" id="NAME3" value="Nachricht"> <div class="resizablefield c12 fieldinnewline "> <label for="F3" class="field">Nachricht</label> <textarea class="" id="F3" name="F3" placeholder="Nachricht" rows="10" style="" ></textarea> </div> <input type="text" name="url" id="url" value="" class="asfield" aria-label="Please ignore this field." style="display: none;"> <div class="formbuttons"> <input type="submit" class="button" value="Absenden"> </div> </form> <script>
+				// if the browser doesn't support input type="date", use jQueryUI datepicker
+				if ( zp.html5support && !zp.html5support["date"] ){
+					// test if jqueryUI is loaded, and if not, load it
+					var mySrc = $z('script[src*="app.js"], script[src*="bundle.js"]').first().attr("src");
+					var jsRelativePath = mySrc.substr(0, mySrc.lastIndexOf("assets/")) + "assets/";
+					
+					if (!$z("link[href*='/js/jqueryui/jquery-ui-1.8.19.custom.css']").length){
+						// load jqueryUI if it is not already loaded
+						if (!$z('link[href*="/bundle.css"], link[href*="/styles.css"]').first().length){
+							$z('<link rel="stylesheet" type="text/css" href="' + jsRelativePath +'js/jqueryui/jquery-ui-1.8.19.custom.css" media="screen" />').appendTo("head");
+						}
+						else{
+							$z('link[href*="/bundle.css"], link[href*="/styles.css"]').first().after('<link rel="stylesheet" type="text/css" href="' + jsRelativePath +'js/jqueryui/jquery-ui-1.8.19.custom.css" media="screen" />');
+						}
+					}
+
+					if (!($z.ui) ) {
+						// append after existing, known js if possible to keep loading order of CSS JS in correct order for improved loading speed
+						if ( !$z('script[src*="app.js"], script[src*="bundle.js"]').first().length ){
+							$z('<scr' + 'ipt src="' + jsRelativePath + 'js/jqueryui/jquery-ui-1.12.1.custom.min.js"></scr' + 'ipt>').appendTo("head");
+						}
+						else{
+							$z('scr' + 'ipt[src*="app.js"], script[src*="bundle.js"]').first().after('<scr' + 'ipt src="' + jsRelativePath + 'js/jqueryui/jquery-ui-1.12.1.custom.min.js"></scr' + 'ipt>');
+						}
+					}
+					// localize the datepicker to DE
+					var isGermanPage = $z('html')[0].lang.toLowerCase().substr(0,2) == "de";
+					if ( isGermanPage && !($z.datepicker.regional['de']) ) {
+						if ( !$z('script[src*="app.js"], script[src*="bundle.js"]').first().length ){
+							$z('<scr' + 'ipt src="' + jsRelativePath + 'js/jqueryui/i18n/jquery.ui.datepicker-de.js"></scr' + 'ipt>').appendTo("head");
+						}
+						else{
+							$z('scr' + 'ipt[src*="app.js"], script[src*="bundle.js"]').first().after('<scr' + 'ipt src="' + jsRelativePath + 'js/jqueryui/i18n/jquery.ui.datepicker-de.js"></scr' + 'ipt>');
+						}
+					}
+					// initialize date fields with datepicker
+					$z("form#form1536 input[type=date]").datepicker({
+						showButtonPanel: true,
+						changeMonth: true,
+						changeYear: true,
+						currentText: isGermanPage ? "Heute" : "Today",
+						closeText: isGermanPage ? "Schließen" : "Close"
+					});
+				}
+			</script> </div> </div> </div> <div class="zpColumn even zpColumnWidth2 c4 last" style=" " data-column-id="220"> <div class="zpColumnItem"> <div id="a1537" data-article-id="1537" data-zpleid="1537" class="articlearea zpwText"> <h3 data-zpfieldname="headline">Mustermann GmbH</h3> <p>Musterstraße 1<br>00000 Musterstadt</p> <p>Telefon: +49 40 000000<br>Telefax: +49 40 000000</p> <p><a href="mailto:info@example.com">info@example.com</a></p> </div> </div> <div class="zpColumnItem"> <div id="a1538" data-article-id="1538" data-zpleid="1538" class="articlearea zpwButton"> <p> <a href="seite-nicht-gefunden.html" class="button" style="margin-top: 20px;"> <span>Ihr Weg zu uns</span> </a> </p> </div> </div> </div> </div> </div> </div> </div> </div> <div id="footer" class="container"> <div id="xmenu" class=""> <a class="xmenulink" href="index.html">Startseite</a> <a class="xmenulink" href="kontakt.html">Kontakt</a> <a class="xmenulink" href="impressum.html">Impressum</a> </div> <div id="copyright"> © 2020 Cotta-Abizeitung. <a href="https://www.zeta-producer.com" class="zp">Website erstellt mit Zeta Producer CMS</a> </div> </div> <script>	
+		function setoverflown(){
+			if ( $z("#nav").is(":hover") || ! $z("#nav > ul > li").length ){
+				return;
+			}
+			if ( $z("#nav:not(.on)").overflown() ){
+				$z("#nav > ul").css("text-align", "left");
+				$z("#nav, #nav > ul li.overflownonly").addClass("overflown");
+				// hide overflown list items
+				var firstTop = $z("#nav > ul > li").eq(0).position().top;
+				$z("#nav > ul > li").each(function(){
+					if ( $z(this).position().top > firstTop ){
+						$z(this).addClass("overflowing");
+					}
+				});
+			}
+			else{
+				$z("#nav > ul").css("text-align", "");
+				$z("#nav, #nav > ul li.overflownonly").removeClass("overflown");
+				// re show previously hidden, overflowing li
+				$z("#nav > ul > li").removeClass("overflowing");
+			}
+		}
+		
+		$z(document).ready(function(){
+			// switches the Mobile Navigation-Menu on/off, when "Menu" link is clicked.
+			$z("a#mobilenavtoggle").on("click", function(e){
+				e.preventDefault();
+				if ( $z("#nav").hasClass("on") ){
+					// we're switching to off now
+					$z("#nav ul li").removeClass("hoverToClickMenuAdded clicked");
+					$z("#nav ul ul").css("display", "").css("visibility", "");
+				}
+				$z("#nav").toggleClass("on");
+			});	
+			
+			setoverflown();
+			var resizeTimeout = null;
+			$z(window).resize(function() {
+				if (resizeTimeout) {
+					clearTimeout(resizeTimeout);
+				}
+				// throttle the resize event
+				resizeTimeout = setTimeout(function () {
+					setoverflown();
+				},150);
+			});
+		});
+		
+		$z(window).on('load', function(){
+			setoverflown();
+			setTimeout(function(){setoverflown();}, 1000);
+		});
+	</script> 
+<!--
+* Layout: Locus Responsive by StS
+* $Id: default.html 81066 2019-11-04 12:00:50Z sseiz $
+-->
+ </body> </html>

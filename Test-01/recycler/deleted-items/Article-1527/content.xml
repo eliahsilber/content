@@ -1,0 +1,29 @@
+<recyclerItem>
+  <pageItems>
+    <pageItem name="Aktuelles" activeBegin="01/01/0001 00:00:00" activeEnd="01/01/0001 00:00:00" alwaysBuild="False" areaName="Standard" isActive="True" objectID="40a611d2-2dd0-494e-9966-e63ec11a567a" rssFlag="False" styleName="Text" editorType="None" orderPosition="0" itemTemplateName="standard">
+      <excerpt>Etiam urna tellus, lobortis vitae consequat eget, tristique id nisi. Nullam lacus urna, condimentum ut iaculis quis, viverra vitae enim. Vivamus massa libero, ullamcorper a viverra lobortis, blandit vel est.</excerpt>
+      <value name="inlinestyle" />
+      <value name="bild" />
+      <value name="bild-url" />
+      <value name="bild-url_nofollow">False</value>
+      <value name="(trennlinie)" />
+      <value name="bild-url_target" />
+      <value name="optionen" />
+      <value name="text">&lt;p&gt;Etiam urna tellus, lobortis vitae &lt;strong&gt;consequat&lt;/strong&gt; eget, tristique 
+id nisi. Nullam lacus urna, condimentum ut iaculis quis, &lt;a href="#"&gt;viverra&lt;/a&gt; 
+vitae enim. &lt;/p&gt;
+&lt;p&gt;Vivamus massa libero, ullamcorper a viverra lobortis, blandit vel est. 
+&lt;/p&gt;</value>
+      <value name="darstellung" />
+      <value name="titel" />
+      <dynamicSettings>
+        <value name="name-align" />
+        <value name="name-color" />
+        <value name="groupid">635938941692158966</value>
+        <value name="cssclass" />
+        <value name="name-level">h2</value>
+        <value name="inlinecss">margin-bottom: 25px;</value>
+      </dynamicSettings>
+    </pageItem>
+  </pageItems>
+</recyclerItem>

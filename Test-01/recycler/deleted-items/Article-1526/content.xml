@@ -1,0 +1,24 @@
+<recyclerItem>
+  <pageItems>
+    <pageItem name="Über uns" activeBegin="01/01/0001 00:00:00" activeEnd="01/01/0001 00:00:00" alwaysBuild="False" areaName="Standard" isActive="True" objectID="993e0645-e2f3-439e-9fdf-feba23b0fd7d" rssFlag="False" styleName="Text" editorType="None" orderPosition="1" itemTemplateName="Standard">
+      <excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ultrices arcu, sagittis pharetra ligula pretium bibendum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</excerpt>
+      <value name="inlinestyle" />
+      <value name="bild" />
+      <value name="bild-url" />
+      <value name="bild-url_nofollow">False</value>
+      <value name="bild-url_target" />
+      <value name="darstellung" />
+      <value name="optionen" />
+      <value name="text">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href="#"&gt;consectetur&lt;/a&gt; adipiscing elit. Cras 
+eleifend ultrices arcu, sagittis pharetra ligula pretium bibendum. Cum sociis &lt;a href="#"&gt;natoque&lt;/a&gt; penatibus et magnis dis parturient montes, nascetur 
+ridiculus mus. &lt;/p&gt;</value>
+      <value name="(trennlinie)" />
+      <value name="titel" />
+      <dynamicSettings>
+        <value name="name-align" />
+        <value name="name-level">h2</value>
+        <value name="groupid">635938941692158966</value>
+      </dynamicSettings>
+    </pageItem>
+  </pageItems>
+</recyclerItem>

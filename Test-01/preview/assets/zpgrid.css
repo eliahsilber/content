@@ -1,0 +1,1879 @@
+﻿/*! $Id: zpgrid.less 85239 2020-04-03 10:30:58Z sseiz $ */
+
+/* Sanitize and default Values in case #val() Values from ZPp are empty or not plain numbers */
+/* BEGIN ZP 12 Grid Style */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L21 */
+div.zpRow {
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L34 */
+div.zpRow div.zpColumn img.singleImage {
+  max-width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L39 */
+div.zpRow div.zpColumn .zpImageGallery img.singleImage {
+  display: block;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L43 */
+div.zpRow div.zpColumn .zpImageGallery a.fancybox {
+  max-width: 100%;
+  /* Bugfix to keep image responsive in IE11 */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L47 */
+div.zpRow div.zpColumn div.zpColumnItem {
+  display: block;
+  float: left;
+  padding: 0;
+}
+/* END ZP 12 Grid Style */
+
+/* *** Global Rules applying to all Layouts ***/
+
+/* break long words in headlines by default, so they don't destroy the layout, in case a layout doesn't activate hyphenation */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L58 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.zphyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L63 */
+.zphyphenate {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-chars: auto 3;
+  -moz-hyphenate-limit-chars: auto 3;
+  -ms-hyphenate-limit-chars: auto 3;
+  hyphenate-limit-chars: auto 3;
+}
+/* flex-slider general overrides */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L69 */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+  z-index: -1;
+}
+/* more responsive iFrames and iFrame Containers */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L77 */
+iframe,
+object,
+embed,
+.zpwIFrame,
+.zpwFacebook_Like-Button,
+.zpwFacebook_Like-Box,
+div.fb-like {
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L83 */
+iframe {
+  border: 0;
+}
+/* Remove eventual borders from 1px images and images in special parents with classes */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L88 */
+img[width="1px"],
+img[width="1"],
+.plain > img,
+.noborder > img,
+img.plain,
+img.noborder,
+.zpwBild.plain a,
+.zpwBild.noborder a,
+.zpwBild.plain a > img,
+.zpwBild.noborder a > img {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L102 */
+ol.zpBreadcrumbs,
+#breadcrumb ol.zpBreadcrumbs,
+.breadcrumb ol.zpBreadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L109 */
+ol.zpBreadcrumbs li,
+#breadcrumb ol.zpBreadcrumbs li,
+.breadcrumb ol.zpBreadcrumbs li {
+  list-style: none;
+  display: inline;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L113 */
+ol.zpBreadcrumbs span:not(.divider),
+#breadcrumb ol.zpBreadcrumbs span:not(.divider),
+.breadcrumb ol.zpBreadcrumbs span:not(.divider) {
+  color: inherit;
+}
+/* *** End Global Rules applying to all Layouts ***/
+
+/* ADDED StS ZP 13 Grid */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L122 */
+div.zpRow .zpColumn,
+.zpColumnItem {
+  box-sizing: border-box;
+  /* IE Bugfix */
+  max-width: 100%;
+  /* IE Bugfix */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L127 */
+.zpColumnItem {
+  width: 100%;
+  /* fill enclosing zpColumn, so inline editing resizing refletcs the column and not the columnItem */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L131 */
+div.zpRow .zpColumn {
+  padding: 0 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L134 */
+div.zpRow .zpFakeColumn.flexbreak {
+  visibility: hidden;
+  width: 100% !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* ***** 12-column grid ***** */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L144 */
+.c1,
+.c2,
+.c4,
+.c5,
+.c6,
+.c7,
+.c8,
+.c9,
+.c10,
+.c11,
+.c12 {
+  box-sizing: border-box;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c12,
+.zpColumnItem.c12,
+.zp-form .c12,
+.zpgrid .c12 {
+  float: left;
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c11,
+.zpColumnItem.c11,
+.zp-form .c11,
+.zpgrid .c11 {
+  float: left;
+  width: 91.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c10,
+.zpColumnItem.c10,
+.zp-form .c10,
+.zpgrid .c10 {
+  float: left;
+  width: 83.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c9,
+.zpColumnItem.c9,
+.zp-form .c9,
+.zpgrid .c9 {
+  float: left;
+  width: 75%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c8,
+.zpColumnItem.c8,
+.zp-form .c8,
+.zpgrid .c8 {
+  float: left;
+  width: 66.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c7,
+.zpColumnItem.c7,
+.zp-form .c7,
+.zpgrid .c7 {
+  float: left;
+  width: 58.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c6,
+.zpColumnItem.c6,
+.zp-form .c6,
+.zpgrid .c6 {
+  float: left;
+  width: 50%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c5,
+.zpColumnItem.c5,
+.zp-form .c5,
+.zpgrid .c5 {
+  float: left;
+  width: 41.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c4,
+.zpColumnItem.c4,
+.zp-form .c4,
+.zpgrid .c4 {
+  float: left;
+  width: 33.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c3,
+.zpColumnItem.c3,
+.zp-form .c3,
+.zpgrid .c3 {
+  float: left;
+  width: 25%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c2,
+.zpColumnItem.c2,
+.zp-form .c2,
+.zpgrid .c2 {
+  float: left;
+  width: 16.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L150 */
+div.zpRow .zpColumn.c1,
+.zpColumnItem.c1,
+.zp-form .c1,
+.zpgrid .c1 {
+  float: left;
+  width: 8.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L165 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L167 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c1,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c1,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c1,
+.zparea[data-numcolumns="8"] .zpColumnItem.c1,
+.zpgrid[data-numcolumns="8"] .zp-form .c1,
+.zparea[data-numcolumns="8"] .zp-form .c1,
+.zpgrid[data-numcolumns="8"] .zpgrid .c1,
+.zparea[data-numcolumns="8"] .zpgrid .c1,
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c2,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c2,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c2,
+.zparea[data-numcolumns="8"] .zpColumnItem.c2,
+.zpgrid[data-numcolumns="8"] .zp-form .c2,
+.zparea[data-numcolumns="8"] .zp-form .c2,
+.zpgrid[data-numcolumns="8"] .zpgrid .c2,
+.zparea[data-numcolumns="8"] .zpgrid .c2 {
+  float: left;
+  width: 12.5%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L178 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c3,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c3,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c3,
+.zparea[data-numcolumns="8"] .zpColumnItem.c3,
+.zpgrid[data-numcolumns="8"] .zp-form .c3,
+.zparea[data-numcolumns="8"] .zp-form .c3,
+.zpgrid[data-numcolumns="8"] .zpgrid .c3,
+.zparea[data-numcolumns="8"] .zpgrid .c3 {
+  float: left;
+  width: 25%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L185 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c4,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c4,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c4,
+.zparea[data-numcolumns="8"] .zpColumnItem.c4,
+.zpgrid[data-numcolumns="8"] .zp-form .c4,
+.zparea[data-numcolumns="8"] .zp-form .c4,
+.zpgrid[data-numcolumns="8"] .zpgrid .c4,
+.zparea[data-numcolumns="8"] .zpgrid .c4,
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c5,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c5,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c5,
+.zparea[data-numcolumns="8"] .zpColumnItem.c5,
+.zpgrid[data-numcolumns="8"] .zp-form .c5,
+.zparea[data-numcolumns="8"] .zp-form .c5,
+.zpgrid[data-numcolumns="8"] .zpgrid .c5,
+.zparea[data-numcolumns="8"] .zpgrid .c5 {
+  float: left;
+  width: 37.5%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L196 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c6,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c6,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c6,
+.zparea[data-numcolumns="8"] .zpColumnItem.c6,
+.zpgrid[data-numcolumns="8"] .zp-form .c6,
+.zparea[data-numcolumns="8"] .zp-form .c6,
+.zpgrid[data-numcolumns="8"] .zpgrid .c6,
+.zparea[data-numcolumns="8"] .zpgrid .c6 {
+  float: left;
+  width: 50%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L203 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c7,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c7,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c7,
+.zparea[data-numcolumns="8"] .zpColumnItem.c7,
+.zpgrid[data-numcolumns="8"] .zp-form .c7,
+.zparea[data-numcolumns="8"] .zp-form .c7,
+.zpgrid[data-numcolumns="8"] .zpgrid .c7,
+.zparea[data-numcolumns="8"] .zpgrid .c7,
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c8,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c8,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c8,
+.zparea[data-numcolumns="8"] .zpColumnItem.c8,
+.zpgrid[data-numcolumns="8"] .zp-form .c8,
+.zparea[data-numcolumns="8"] .zp-form .c8,
+.zpgrid[data-numcolumns="8"] .zpgrid .c8,
+.zparea[data-numcolumns="8"] .zpgrid .c8 {
+  float: left;
+  width: 62.5%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L214 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c9,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c9,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c9,
+.zparea[data-numcolumns="8"] .zpColumnItem.c9,
+.zpgrid[data-numcolumns="8"] .zp-form .c9,
+.zparea[data-numcolumns="8"] .zp-form .c9,
+.zpgrid[data-numcolumns="8"] .zpgrid .c9,
+.zparea[data-numcolumns="8"] .zpgrid .c9 {
+  float: left;
+  width: 75%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L221 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c10,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c10,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c10,
+.zparea[data-numcolumns="8"] .zpColumnItem.c10,
+.zpgrid[data-numcolumns="8"] .zp-form .c10,
+.zparea[data-numcolumns="8"] .zp-form .c10,
+.zpgrid[data-numcolumns="8"] .zpgrid .c10,
+.zparea[data-numcolumns="8"] .zpgrid .c10,
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c11,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c11,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c11,
+.zparea[data-numcolumns="8"] .zpColumnItem.c11,
+.zpgrid[data-numcolumns="8"] .zp-form .c11,
+.zparea[data-numcolumns="8"] .zp-form .c11,
+.zpgrid[data-numcolumns="8"] .zpgrid .c11,
+.zparea[data-numcolumns="8"] .zpgrid .c11 {
+  float: left;
+  width: 87.5%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L232 */
+.zpgrid[data-numcolumns="8"] div.zpRow .zpColumn.c12,
+.zparea[data-numcolumns="8"] div.zpRow .zpColumn.c12,
+.zpgrid[data-numcolumns="8"] .zpColumnItem.c12,
+.zparea[data-numcolumns="8"] .zpColumnItem.c12,
+.zpgrid[data-numcolumns="8"] .zp-form .c12,
+.zparea[data-numcolumns="8"] .zp-form .c12,
+.zpgrid[data-numcolumns="8"] .zpgrid .c12,
+.zparea[data-numcolumns="8"] .zpgrid .c12 {
+  float: left;
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L240 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L242 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c1,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c1,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c1,
+.zparea[data-numcolumns="6"] .zpColumnItem.c1,
+.zpgrid[data-numcolumns="6"] .zp-form .c1,
+.zparea[data-numcolumns="6"] .zp-form .c1,
+.zpgrid[data-numcolumns="6"] .zpgrid .c1,
+.zparea[data-numcolumns="6"] .zpgrid .c1,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c2,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c2,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c2,
+.zparea[data-numcolumns="6"] .zpColumnItem.c2,
+.zpgrid[data-numcolumns="6"] .zp-form .c2,
+.zparea[data-numcolumns="6"] .zp-form .c2,
+.zpgrid[data-numcolumns="6"] .zpgrid .c2,
+.zparea[data-numcolumns="6"] .zpgrid .c2 {
+  float: left;
+  width: 16.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L253 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c3,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c3,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c3,
+.zparea[data-numcolumns="6"] .zpColumnItem.c3,
+.zpgrid[data-numcolumns="6"] .zp-form .c3,
+.zparea[data-numcolumns="6"] .zp-form .c3,
+.zpgrid[data-numcolumns="6"] .zpgrid .c3,
+.zparea[data-numcolumns="6"] .zpgrid .c3,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c4,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c4,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c4,
+.zparea[data-numcolumns="6"] .zpColumnItem.c4,
+.zpgrid[data-numcolumns="6"] .zp-form .c4,
+.zparea[data-numcolumns="6"] .zp-form .c4,
+.zpgrid[data-numcolumns="6"] .zpgrid .c4,
+.zparea[data-numcolumns="6"] .zpgrid .c4 {
+  float: left;
+  width: 33.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L264 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c5,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c5,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c5,
+.zparea[data-numcolumns="6"] .zpColumnItem.c5,
+.zpgrid[data-numcolumns="6"] .zp-form .c5,
+.zparea[data-numcolumns="6"] .zp-form .c5,
+.zpgrid[data-numcolumns="6"] .zpgrid .c5,
+.zparea[data-numcolumns="6"] .zpgrid .c5,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c6,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c6,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c6,
+.zparea[data-numcolumns="6"] .zpColumnItem.c6,
+.zpgrid[data-numcolumns="6"] .zp-form .c6,
+.zparea[data-numcolumns="6"] .zp-form .c6,
+.zpgrid[data-numcolumns="6"] .zpgrid .c6,
+.zparea[data-numcolumns="6"] .zpgrid .c6 {
+  float: left;
+  width: 50%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L275 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c7,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c7,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c7,
+.zparea[data-numcolumns="6"] .zpColumnItem.c7,
+.zpgrid[data-numcolumns="6"] .zp-form .c7,
+.zparea[data-numcolumns="6"] .zp-form .c7,
+.zpgrid[data-numcolumns="6"] .zpgrid .c7,
+.zparea[data-numcolumns="6"] .zpgrid .c7,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c8,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c8,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c8,
+.zparea[data-numcolumns="6"] .zpColumnItem.c8,
+.zpgrid[data-numcolumns="6"] .zp-form .c8,
+.zparea[data-numcolumns="6"] .zp-form .c8,
+.zpgrid[data-numcolumns="6"] .zpgrid .c8,
+.zparea[data-numcolumns="6"] .zpgrid .c8 {
+  float: left;
+  width: 66.666666667%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L286 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c9,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c9,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c9,
+.zparea[data-numcolumns="6"] .zpColumnItem.c9,
+.zpgrid[data-numcolumns="6"] .zp-form .c9,
+.zparea[data-numcolumns="6"] .zp-form .c9,
+.zpgrid[data-numcolumns="6"] .zpgrid .c9,
+.zparea[data-numcolumns="6"] .zpgrid .c9,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c10,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c10,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c10,
+.zparea[data-numcolumns="6"] .zpColumnItem.c10,
+.zpgrid[data-numcolumns="6"] .zp-form .c10,
+.zparea[data-numcolumns="6"] .zp-form .c10,
+.zpgrid[data-numcolumns="6"] .zpgrid .c10,
+.zparea[data-numcolumns="6"] .zpgrid .c10 {
+  float: left;
+  width: 83.333333333%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L297 */
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c11,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c11,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c11,
+.zparea[data-numcolumns="6"] .zpColumnItem.c11,
+.zpgrid[data-numcolumns="6"] .zp-form .c11,
+.zparea[data-numcolumns="6"] .zp-form .c11,
+.zpgrid[data-numcolumns="6"] .zpgrid .c11,
+.zparea[data-numcolumns="6"] .zpgrid .c11,
+.zpgrid[data-numcolumns="6"] div.zpRow .zpColumn.c12,
+.zparea[data-numcolumns="6"] div.zpRow .zpColumn.c12,
+.zpgrid[data-numcolumns="6"] .zpColumnItem.c12,
+.zparea[data-numcolumns="6"] .zpColumnItem.c12,
+.zpgrid[data-numcolumns="6"] .zp-form .c12,
+.zparea[data-numcolumns="6"] .zp-form .c12,
+.zpgrid[data-numcolumns="6"] .zpgrid .c12,
+.zparea[data-numcolumns="6"] .zpgrid .c12 {
+  float: left;
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L309 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L311 */
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c1,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c1,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c1,
+.zparea[data-numcolumns="4"] .zpColumnItem.c1,
+.zpgrid[data-numcolumns="4"] .zp-form .c1,
+.zparea[data-numcolumns="4"] .zp-form .c1,
+.zpgrid[data-numcolumns="4"] .zpgrid .c1,
+.zparea[data-numcolumns="4"] .zpgrid .c1,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c2,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c2,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c2,
+.zparea[data-numcolumns="4"] .zpColumnItem.c2,
+.zpgrid[data-numcolumns="4"] .zp-form .c2,
+.zparea[data-numcolumns="4"] .zp-form .c2,
+.zpgrid[data-numcolumns="4"] .zpgrid .c2,
+.zparea[data-numcolumns="4"] .zpgrid .c2,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c3,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c3,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c3,
+.zparea[data-numcolumns="4"] .zpColumnItem.c3,
+.zpgrid[data-numcolumns="4"] .zp-form .c3,
+.zparea[data-numcolumns="4"] .zp-form .c3,
+.zpgrid[data-numcolumns="4"] .zpgrid .c3,
+.zparea[data-numcolumns="4"] .zpgrid .c3 {
+  float: left;
+  width: 25%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L326 */
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c4,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c4,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c4,
+.zparea[data-numcolumns="4"] .zpColumnItem.c4,
+.zpgrid[data-numcolumns="4"] .zp-form .c4,
+.zparea[data-numcolumns="4"] .zp-form .c4,
+.zpgrid[data-numcolumns="4"] .zpgrid .c4,
+.zparea[data-numcolumns="4"] .zpgrid .c4,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c5,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c5,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c5,
+.zparea[data-numcolumns="4"] .zpColumnItem.c5,
+.zpgrid[data-numcolumns="4"] .zp-form .c5,
+.zparea[data-numcolumns="4"] .zp-form .c5,
+.zpgrid[data-numcolumns="4"] .zpgrid .c5,
+.zparea[data-numcolumns="4"] .zpgrid .c5,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c6,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c6,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c6,
+.zparea[data-numcolumns="4"] .zpColumnItem.c6,
+.zpgrid[data-numcolumns="4"] .zp-form .c6,
+.zparea[data-numcolumns="4"] .zp-form .c6,
+.zpgrid[data-numcolumns="4"] .zpgrid .c6,
+.zparea[data-numcolumns="4"] .zpgrid .c6 {
+  float: left;
+  width: 50%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L341 */
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c7,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c7,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c7,
+.zparea[data-numcolumns="4"] .zpColumnItem.c7,
+.zpgrid[data-numcolumns="4"] .zp-form .c7,
+.zparea[data-numcolumns="4"] .zp-form .c7,
+.zpgrid[data-numcolumns="4"] .zpgrid .c7,
+.zparea[data-numcolumns="4"] .zpgrid .c7,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c8,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c8,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c8,
+.zparea[data-numcolumns="4"] .zpColumnItem.c8,
+.zpgrid[data-numcolumns="4"] .zp-form .c8,
+.zparea[data-numcolumns="4"] .zp-form .c8,
+.zpgrid[data-numcolumns="4"] .zpgrid .c8,
+.zparea[data-numcolumns="4"] .zpgrid .c8,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c9,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c9,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c9,
+.zparea[data-numcolumns="4"] .zpColumnItem.c9,
+.zpgrid[data-numcolumns="4"] .zp-form .c9,
+.zparea[data-numcolumns="4"] .zp-form .c9,
+.zpgrid[data-numcolumns="4"] .zpgrid .c9,
+.zparea[data-numcolumns="4"] .zpgrid .c9 {
+  float: left;
+  width: 75%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L356 */
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c10,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c10,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c10,
+.zparea[data-numcolumns="4"] .zpColumnItem.c10,
+.zpgrid[data-numcolumns="4"] .zp-form .c10,
+.zparea[data-numcolumns="4"] .zp-form .c10,
+.zpgrid[data-numcolumns="4"] .zpgrid .c10,
+.zparea[data-numcolumns="4"] .zpgrid .c10,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c11,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c11,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c11,
+.zparea[data-numcolumns="4"] .zpColumnItem.c11,
+.zpgrid[data-numcolumns="4"] .zp-form .c11,
+.zparea[data-numcolumns="4"] .zp-form .c11,
+.zpgrid[data-numcolumns="4"] .zpgrid .c11,
+.zparea[data-numcolumns="4"] .zpgrid .c11,
+.zpgrid[data-numcolumns="4"] div.zpRow .zpColumn.c12,
+.zparea[data-numcolumns="4"] div.zpRow .zpColumn.c12,
+.zpgrid[data-numcolumns="4"] .zpColumnItem.c12,
+.zparea[data-numcolumns="4"] .zpColumnItem.c12,
+.zpgrid[data-numcolumns="4"] .zp-form .c12,
+.zparea[data-numcolumns="4"] .zp-form .c12,
+.zpgrid[data-numcolumns="4"] .zpgrid .c12,
+.zparea[data-numcolumns="4"] .zpgrid .c12 {
+  float: left;
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L374 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L379 */
+.zpColumn.c5 .zp-form .c1,
+.zpColumn.c4 .zp-form .c1,
+.zpColumn.c3 .zp-form .c1,
+.zpColumn.c2 .zp-form .c1,
+.zpColumn.c1 .zp-form .c1,
+.zpColumn.c5 .zp-form .c2,
+.zpColumn.c4 .zp-form .c2,
+.zpColumn.c3 .zp-form .c2,
+.zpColumn.c2 .zp-form .c2,
+.zpColumn.c1 .zp-form .c2,
+.zpColumn.c5 .zp-form .c3,
+.zpColumn.c4 .zp-form .c3,
+.zpColumn.c3 .zp-form .c3,
+.zpColumn.c2 .zp-form .c3,
+.zpColumn.c1 .zp-form .c3,
+.zpColumn.c5 .zp-form .c4,
+.zpColumn.c4 .zp-form .c4,
+.zpColumn.c3 .zp-form .c4,
+.zpColumn.c2 .zp-form .c4,
+.zpColumn.c1 .zp-form .c4,
+.zpColumn.c5 .zp-form .c5,
+.zpColumn.c4 .zp-form .c5,
+.zpColumn.c3 .zp-form .c5,
+.zpColumn.c2 .zp-form .c5,
+.zpColumn.c1 .zp-form .c5,
+.zpColumn.c5 .zp-form .c6,
+.zpColumn.c4 .zp-form .c6,
+.zpColumn.c3 .zp-form .c6,
+.zpColumn.c2 .zp-form .c6,
+.zpColumn.c1 .zp-form .c6,
+.zpColumn.c5 .zp-form .c7,
+.zpColumn.c4 .zp-form .c7,
+.zpColumn.c3 .zp-form .c7,
+.zpColumn.c2 .zp-form .c7,
+.zpColumn.c1 .zp-form .c7,
+.zpColumn.c5 .zp-form .c8,
+.zpColumn.c4 .zp-form .c8,
+.zpColumn.c3 .zp-form .c8,
+.zpColumn.c2 .zp-form .c8,
+.zpColumn.c1 .zp-form .c8,
+.zpColumn.c5 .zp-form .c9,
+.zpColumn.c4 .zp-form .c9,
+.zpColumn.c3 .zp-form .c9,
+.zpColumn.c2 .zp-form .c9,
+.zpColumn.c1 .zp-form .c9,
+.zpColumn.c5 .zp-form .c10,
+.zpColumn.c4 .zp-form .c10,
+.zpColumn.c3 .zp-form .c10,
+.zpColumn.c2 .zp-form .c10,
+.zpColumn.c1 .zp-form .c10,
+.zpColumn.c5 .zp-form .c11,
+.zpColumn.c4 .zp-form .c11,
+.zpColumn.c3 .zp-form .c11,
+.zpColumn.c2 .zp-form .c11,
+.zpColumn.c1 .zp-form .c11,
+.zpColumn.c5 .zp-form .c12,
+.zpColumn.c4 .zp-form .c12,
+.zpColumn.c3 .zp-form .c12,
+.zpColumn.c2 .zp-form .c12,
+.zpColumn.c1 .zp-form .c12 {
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L393 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L394 */
+.zpColumn.c5 .zp-form.zp-editable .resizablefield input,
+.zpColumn.c4 .zp-form.zp-editable .resizablefield input,
+.zpColumn.c3 .zp-form.zp-editable .resizablefield input,
+.zpColumn.c2 .zp-form.zp-editable .resizablefield input,
+.zpColumn.c1 .zp-form.zp-editable .resizablefield input,
+.zpColumn.c5 .zp-form.zp-editable .resizablefield textarea,
+.zpColumn.c4 .zp-form.zp-editable .resizablefield textarea,
+.zpColumn.c3 .zp-form.zp-editable .resizablefield textarea,
+.zpColumn.c2 .zp-form.zp-editable .resizablefield textarea,
+.zpColumn.c1 .zp-form.zp-editable .resizablefield textarea {
+  max-width: none !important;
+}
+/* *** always scale columns in a .noresize Row (i.e. news columns) *** */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L402 */
+div.zpRow.noresize .zpColumn.c1,
+div.zpRow.noresize .zpColumn.c2,
+div.zpRow.noresize .zpColumn.c3,
+div.zpRow.noresize .zpColumn.c4,
+div.zpRow.noresize .zpColumn.c5,
+div.zpRow.noresize .zpColumn.c6,
+div.zpRow.noresize .zpColumn.c7,
+div.zpRow.noresize .zpColumn.c8,
+div.zpRow.noresize .zpColumn.c9,
+div.zpRow.noresize .zpColumn.c10,
+div.zpRow.noresize .zpColumn.c11,
+div.zpRow.noresize .zpColumn.c12 {
+  width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L416 */
+div.zpRow.noresize .zpSpacer {
+  clear: both;
+}
+/* *** 2-Column Breakpoint (ipad portrait) *** */
+
+@media (max-width: 768px) {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L422 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L423 */
+  .responsivelayout div.zpRow .zpColumn.c1,
+  .responsivelayout .zpColumnItem.c1,
+  .responsivelayout .zpgrid .c1:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c2,
+  .responsivelayout .zpColumnItem.c2,
+  .responsivelayout .zpgrid .c2:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c3,
+  .responsivelayout .zpColumnItem.c3,
+  .responsivelayout .zpgrid .c3:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c4,
+  .responsivelayout .zpColumnItem.c4,
+  .responsivelayout .zpgrid .c4:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c5,
+  .responsivelayout .zpColumnItem.c5,
+  .responsivelayout .zpgrid .c5:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c6,
+  .responsivelayout .zpColumnItem.c6,
+  .responsivelayout .zpgrid .c6:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c7,
+  .responsivelayout .zpColumnItem.c7,
+  .responsivelayout .zpgrid .c7:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c8,
+  .responsivelayout .zpColumnItem.c8,
+  .responsivelayout .zpgrid .c8:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c9,
+  .responsivelayout .zpColumnItem.c9,
+  .responsivelayout .zpgrid .c9:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c10,
+  .responsivelayout .zpColumnItem.c10,
+  .responsivelayout .zpgrid .c10:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c11,
+  .responsivelayout .zpColumnItem.c11,
+  .responsivelayout .zpgrid .c11:not(.resizablefield) {
+    width: 50% !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L439 */
+  .responsivelayout .zpColumn.zpSpacer:first-child + .zpColumn.odd:last-child {
+    width: 80% !important;
+    margin-left: 10%;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L444 */
+  .responsivelayout .zpColumn.odd {
+    clear: left;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L448 */
+  .responsivelayout .zpColumn:not(.styled):nth-last-child(1n+3) {
+    margin-bottom: 1em !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L453 */
+  .responsivelayout div.zpRow .zpColumn.c12,
+  .responsivelayout .zpColumnItem.c12,
+  .responsivelayout .zp-form .c12,
+  .responsivelayout .zpgrid .c12 {
+    width: 100% !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L456 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L457 */
+  .responsivelayout .zp-form.zp-editable .resizablefield input,
+  .responsivelayout .zp-form.zp-editable .resizablefield textarea {
+    max-width: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L464 */
+  .responsivelayout .zpSpacer.hor,
+  .responsivelayout div.zpRow .zpColumn.zpSpacer:not(:only-child) {
+    display: none;
+  }
+}
+/* *** 1-Column Breakpoint (iphone 6 landscape) *** */
+
+@media (max-width: 479px) {
+  /* *** 1-Column Breakpoint (iphone 6 landscape) *** */
+  
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L477 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L478 */
+  .responsivelayout div.zpRow .zpColumn.c1,
+  .responsivelayout .zpColumnItem.c1,
+  .responsivelayout .zp-form .c1,
+  .responsivelayout .zpgrid .c1:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c2,
+  .responsivelayout .zpColumnItem.c2,
+  .responsivelayout .zp-form .c2,
+  .responsivelayout .zpgrid .c2:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c3,
+  .responsivelayout .zpColumnItem.c3,
+  .responsivelayout .zp-form .c3,
+  .responsivelayout .zpgrid .c3:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c4,
+  .responsivelayout .zpColumnItem.c4,
+  .responsivelayout .zp-form .c4,
+  .responsivelayout .zpgrid .c4:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c5,
+  .responsivelayout .zpColumnItem.c5,
+  .responsivelayout .zp-form .c5,
+  .responsivelayout .zpgrid .c5:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c6,
+  .responsivelayout .zpColumnItem.c6,
+  .responsivelayout .zp-form .c6,
+  .responsivelayout .zpgrid .c6:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c7,
+  .responsivelayout .zpColumnItem.c7,
+  .responsivelayout .zp-form .c7,
+  .responsivelayout .zpgrid .c7:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c8,
+  .responsivelayout .zpColumnItem.c8,
+  .responsivelayout .zp-form .c8,
+  .responsivelayout .zpgrid .c8:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c9,
+  .responsivelayout .zpColumnItem.c9,
+  .responsivelayout .zp-form .c9,
+  .responsivelayout .zpgrid .c9:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c10,
+  .responsivelayout .zpColumnItem.c10,
+  .responsivelayout .zp-form .c10,
+  .responsivelayout .zpgrid .c10:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c11,
+  .responsivelayout .zpColumnItem.c11,
+  .responsivelayout .zp-form .c11,
+  .responsivelayout .zpgrid .c11:not(.resizablefield),
+  .responsivelayout div.zpRow .zpColumn.c12,
+  .responsivelayout .zpColumnItem.c12,
+  .responsivelayout .zp-form .c12,
+  .responsivelayout .zpgrid .c12:not(.resizablefield) {
+    width: 100% !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L492 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L493 */
+  .responsivelayout .zp-form.zp-editable .resizablefield input,
+  .responsivelayout .zp-form.zp-editable .resizablefield textarea {
+    max-width: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L499 */
+  .responsivelayout .zpSpacer {
+    clear: both;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L504 */
+  .responsivelayout div.zpRow .zpColumn:not(.styled) {
+    margin-bottom: 1em !important;
+  }
+}
+@media (max-width: 320px) {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L512 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L513 */
+  .responsivelayout .zp-form .c1,
+  .responsivelayout .zp-form .c2,
+  .responsivelayout .zp-form .c3,
+  .responsivelayout .zp-form .c4,
+  .responsivelayout .zp-form .c5,
+  .responsivelayout .zp-form .c6,
+  .responsivelayout .zp-form .c7,
+  .responsivelayout .zp-form .c8,
+  .responsivelayout .zp-form .c9,
+  .responsivelayout .zp-form .c10,
+  .responsivelayout .zp-form .c11,
+  .responsivelayout .zp-form .c12 {
+    width: 100% !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L527 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L528 */
+  .responsivelayout .zp-form.zp-editable .resizablefield input,
+  .responsivelayout .zp-form.zp-editable .resizablefield textarea {
+    max-width: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L534 */
+  .responsivelayout .zpSpacer {
+    clear: both;
+  }
+}
+/* Breakout Styles for layouts which don't support them edge to edge */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L541 */
+.zpBreakout > iframe {
+  display: block;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L545 */
+body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L549 */
+body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) + .zpContainer:not(.zpBreakout) {
+  margin-top: 2em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L552 */
+body:not(.withnews) .zpBreakout:not(.hasNews) .zpRow {
+  width: 100%;
+  margin: 0 auto;
+  float: none;
+}
+/* Breakout Styles for responsive layouts which support them edge to edge */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L557 */
+.responsivelayout.supportsbreakout body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) {
+  /* we don't use overflow hidden on body to avoid horizontal scrollbar because dropdown menues (e.g. on the far right) might need an overflow */
+  width: calc(100vw - 9px);
+  /* -9px compensates possible scrollbar Safari: -8, Chrome: -9 */
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  padding: 2em 0 2em 9px;
+  /* padding-left is equal to amount to compensate scrollbar */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L564 */
+.responsivelayout.supportsbreakout body.touch:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) {
+  width: 100vw;
+  /* Do not compensate on transparent Scrollbars on touch devices like e.g. the ipad. */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L567 */
+.responsivelayout.supportsbreakout body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) + .zpContainer:not(.zpBreakout) {
+  margin-top: 2em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L570 */
+.responsivelayout.supportsbreakout body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) > .zpRow {
+  max-width: 1085px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L575 */
+.responsivelayout.supportsbreakout body:not(.withnews) .zpContainer.zpBreakout:not(.hasNews) + .zpRow {
+  margin-top: 2em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L579 */
+.responsivelayout.supportsbreakout body:not(.withnews) .span8 .zpContainer.zpBreakout:not(.hasNews) {
+  margin-left: calc(-50vw + 77%);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L584 */
+.supportsbreakout body:not(.withnews) .zpColumn.c12 .zpBreakout:not(.hasNews) {
+  /* we don't use overflow hidden on body to avoid horizontal scrollbar because dropdown menues (e.g. on the far right) might need an overflow */
+  width: calc(100vw - 9px);
+  /* -9px compensates possible scrollbar Safari: -8, Chrome: -9 */
+  margin-left: calc(-50vw + 50%);
+  /* Todo: this might break if less compression is used! */
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden !important;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L594 */
+.zpVerticalCenter,
+div.zpRow.zpVerticalCenter,
+div.zpRow .zpVerticalCenter,
+div.zpRow .zpColumn.zpVerticalCenter,
+div svn .zpColumn .zpVerticalCenter {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L612 */
+.zpwSpacer {
+  visibility: hidden;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 0 !important;
+}
+/*
+.zpgrid,
+.zpgrid #grid {
+  max-width: @contentcopy-max-image-width + 30px;
+}
+*/
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L628 */
+.zpgrid.copiedlayout {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/*** ZP 14 Additions *** */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L634 */
+.zparea img:not(.zplogo):not(.limitsvg)[src$=".svg"] {
+  width: auto;
+  max-width: 100%;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L640 */
+/*** Container Scroll Animation ***/
+
+@media screen {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L647 */
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L649 */
+  .js body:not(.zpreducemotion) .zpanimatewrap {
+    overflow: hidden !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L652 */
+  .js body:not(.zpreducemotion) .zpanimate.slideleft {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    /* used 100vw here, but the IE animated left to right instead of right to left */
+    opacity: 0;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L655 */
+  .js body:not(.zpreducemotion) .zpanimate.slideleft.show {
+    -webkit-transition: opacity 1000ms ease-out 500ms, transform 500ms ease-out 200ms;
+    transition: opacity 1000ms ease-out 500ms, transform 500ms ease-out 200ms;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L661 */
+  .js body:not(.zpreducemotion) .zpanimate.slideright {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    /* used 100vw here, but the IE animated left to right instead of right to left */
+    opacity: 0;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L664 */
+  .js body:not(.zpreducemotion) .zpanimate.slideright.show {
+    -webkit-transition: opacity 1000ms ease-out 500ms, transform 500ms ease-out 200ms;
+    transition: opacity 1000ms ease-out 500ms, transform 500ms ease-out 200ms;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L670 */
+  .js body:not(.zpreducemotion) .zpanimate.fadein {
+    opacity: 0;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L672 */
+  .js body:not(.zpreducemotion) .zpanimate.fadein.show {
+    -webkit-transition: opacity 1000ms ease-in;
+    transition: opacity 1000ms ease-in;
+    opacity: 1;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L677 */
+  .js body:not(.zpreducemotion) .zpanimate.floatin {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L680 */
+  .js body:not(.zpreducemotion) .zpanimate.floatin.show {
+    -webkit-transition: opacity 2500ms ease-out 500ms, transform 1500ms ease-out 200ms;
+    transition: opacity 2500ms ease-out 500ms, transform 1500ms ease-out 200ms;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L686 */
+  .js body:not(.zpreducemotion) .zpanimate.zoomout {
+    opacity: 0;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L689 */
+  .js body:not(.zpreducemotion) .zpanimate.zoomout.show {
+    opacity: 1;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L691 */
+  .js body:not(.zpreducemotion) .zpanimate.zoomout.show:not(.played) {
+    animation-name: zoomout;
+    animation-duration: 500ms;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L699 */
+  .js body:not(.zpreducemotion) .zpeffect.zphoverscale {
+    -webkit-transition: transform 500ms ease;
+    transition: transform 500ms ease;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L702 */
+  .js body:not(.zpreducemotion) .zpeffect.zphoverscale.zplazyloaded {
+    -webkit-transition: transform 500ms ease, opacity 600ms;
+    transition: transform 500ms ease, opacity 600ms;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L705 */
+  .js body:not(.zpreducemotion) .zpeffect.zphoverscale:hover,
+  .js body:not(.zpreducemotion) .zpeffect.zphoverscale.hover,
+  .js body:not(.zpreducemotion) a:hover .zpeffect.zphoverscale {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  @keyframes zoomout {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(5, 5);-ms-transform: scale(5, 5);transform: scale(5, 5);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);-ms-transform: scale(1, 1);transform: scale(1, 1);
+    }
+  }
+}
+@media print {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L724 */
+  .zpanimate.show {
+    opacity: 1;
+  }
+}
+/*** Class to make tables more responsive - for general use i.e. in Online-CMS ***/
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L731 */
+table.zpresponsive {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+@media screen and (max-width: 640px) {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L737 */
+  table.zpresponsive {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L750 */
+#ui-datepicker-div {
+  padding: 0;
+  z-index: 200 !important;
+  background-color: #ffffff !important;
+  font-family: inherit !important;
+  color: #333333 !important;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L760 */
+#ui-datepicker-div .ui-datepicker-header {
+  border-radius: 0;
+  border: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L764 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L765 */
+#ui-datepicker-div .ui-datepicker-calendar th {
+  opacity: 0.8;
+  padding-bottom: 1px;
+  text-align: center;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L770 */
+#ui-datepicker-div .ui-datepicker-calendar td,
+#ui-datepicker-div .ui-datepicker-calendar td a,
+#ui-datepicker-div .ui-datepicker-calendar td span {
+  text-align: center;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L775 */
+#ui-datepicker-div .ui-datepicker-calendar a.ui-state-default {
+  background: transparent;
+  border: 0;
+  color: #333333;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L780 */
+#ui-datepicker-div .ui-datepicker-calendar a.ui-state-highlight {
+  color: #ffffff;
+  background-color: red;
+  border-radius: 50px;
+  font-weight: bolder;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L788 */
+#ui-datepicker-div input,
+#ui-datepicker-div select,
+#ui-datepicker-div textarea,
+#ui-datepicker-div button {
+  font-family: inherit;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L791 */
+#ui-datepicker-div .ui-state-default {
+  background: #e6e6e6;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L796 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L797 */
+.zp-form.zp14 .recaptchatable,
+.zp-shopform .recaptchatable,
+.zpsajaxmodal .recaptchatable,
+.eventCalendar.table .filter .recaptchatable {
+  background-color: #ffffff;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L801 */
+.zp-form.zp14 .resizablefield.fieldinnewline,
+.zp-shopform .resizablefield.fieldinnewline,
+.zpsajaxmodal .resizablefield.fieldinnewline,
+.eventCalendar.table .filter .resizablefield.fieldinnewline {
+  clear: both;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L805 */
+.zp-form.zp14 label#recaptchalabel,
+.zp-shopform label#recaptchalabel,
+.zpsajaxmodal label#recaptchalabel,
+.eventCalendar.table .filter label#recaptchalabel,
+.zp-form.zp14 label#recaptchalabel.multiline.field,
+.zp-shopform label#recaptchalabel.multiline.field,
+.zpsajaxmodal label#recaptchalabel.multiline.field,
+.eventCalendar.table .filter label#recaptchalabel.multiline.field,
+.zp-form.zp14 #recaptcha_widget_div,
+.zp-shopform #recaptcha_widget_div,
+.zpsajaxmodal #recaptcha_widget_div,
+.eventCalendar.table .filter #recaptcha_widget_div,
+.zp-form.zp14 div.g-recaptcha,
+.zp-shopform div.g-recaptcha,
+.zpsajaxmodal div.g-recaptcha,
+.eventCalendar.table .filter div.g-recaptcha {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L812 */
+.zp-form.zp14 input.typetext,
+.zp-shopform input.typetext,
+.zpsajaxmodal input.typetext,
+.eventCalendar.table .filter input.typetext {
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 15px;
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid #9A9A9A;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L823 */
+.zp-form.zp14 input,
+.zp-shopform input,
+.zpsajaxmodal input,
+.eventCalendar.table .filter input,
+.zp-form.zp14 textarea,
+.zp-shopform textarea,
+.zpsajaxmodal textarea,
+.eventCalendar.table .filter textarea,
+.zp-form.zp14 select,
+.zp-shopform select,
+.zpsajaxmodal select,
+.eventCalendar.table .filter select {
+  font-family: inherit;
+  font-size: inherit;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L829 */
+.zp-form.zp14 input.typetext,
+.zp-shopform input.typetext,
+.zpsajaxmodal input.typetext,
+.eventCalendar.table .filter input.typetext,
+.zp-form.zp14 textarea,
+.zp-shopform textarea,
+.zpsajaxmodal textarea,
+.eventCalendar.table .filter textarea,
+.zp-form.zp14 select,
+.zp-shopform select,
+.zpsajaxmodal select,
+.eventCalendar.table .filter select {
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid #9A9A9A;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L837 */
+.zp-form.zp14 select,
+.zp-shopform select,
+.zpsajaxmodal select,
+.eventCalendar.table .filter select {
+  max-width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  min-height: 2.5rem;
+  padding: 0 15px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12px' height='7px' viewBox='0 0 12 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E     %3Cpolygon class='chevron' stroke='none' fill='%23333333' fill-rule='evenodd' points='6.05023193 6.71226044 6.02769279 6.73479958 5.6741394 6.38124619 1.14644661 1.85355339 0.792893219 1.5 1.5 0.792893219 1.85355339 1.14644661 6.02825928 5.3211525 10.2249378 1.12447395 10.5784912 0.770920563 11.285598 1.47802734 10.9320446 1.83158073 6.40435181 6.35927353 6.05079842 6.71282692'%3E%3C/polygon%3E %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L853 */
+.zp-form.zp14 select.zpmultilineselect,
+.zp-shopform select.zpmultilineselect,
+.zpsajaxmodal select.zpmultilineselect,
+.eventCalendar.table .filter select.zpmultilineselect {
+  background-image: none;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L857 */
+.zp-form.zp14 select::-ms-expand,
+.zp-shopform select::-ms-expand,
+.zpsajaxmodal select::-ms-expand,
+.eventCalendar.table .filter select::-ms-expand {
+  display: none;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L860 */
+.zp-form.zp14 input.typetext.error,
+.zp-shopform input.typetext.error,
+.zpsajaxmodal input.typetext.error,
+.eventCalendar.table .filter input.typetext.error,
+.zp-form.zp14 textarea.typetext.error,
+.zp-shopform textarea.typetext.error,
+.zpsajaxmodal textarea.typetext.error,
+.eventCalendar.table .filter textarea.typetext.error,
+.zp-form.zp14 select.error,
+.zp-shopform select.error,
+.zpsajaxmodal select.error,
+.eventCalendar.table .filter select.error {
+  border: 1px solid red;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L865 */
+.zp-form.zp14 .error-text,
+.zp-shopform .error-text,
+.zpsajaxmodal .error-text,
+.eventCalendar.table .filter .error-text {
+  clear: both;
+  display: block;
+  margin-bottom: 1em;
+  color: red;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L872 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L873 */
+.zp-form.zp14.autohidelabels .resizablefield,
+.zp-shopform.autohidelabels .resizablefield,
+.zpsajaxmodal.autohidelabels .resizablefield,
+.eventCalendar.table .filter.autohidelabels .resizablefield {
+  position: relative;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L876 */
+.zp-form.zp14.autohidelabels .resizablefield.nofloat,
+.zp-shopform.autohidelabels .resizablefield.nofloat,
+.zpsajaxmodal.autohidelabels .resizablefield.nofloat,
+.eventCalendar.table .filter.autohidelabels .resizablefield.nofloat {
+  float: none;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L880 */
+.zp-form.zp14.autohidelabels .resizablefield input + .error-text,
+.zp-shopform.autohidelabels .resizablefield input + .error-text,
+.zpsajaxmodal.autohidelabels .resizablefield input + .error-text,
+.eventCalendar.table .filter.autohidelabels .resizablefield input + .error-text,
+.zp-form.zp14.autohidelabels .resizablefield textarea + .error-text,
+.zp-shopform.autohidelabels .resizablefield textarea + .error-text,
+.zpsajaxmodal.autohidelabels .resizablefield textarea + .error-text,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea + .error-text,
+.zp-form.zp14.autohidelabels .resizablefield select + .error-text,
+.zp-shopform.autohidelabels .resizablefield select + .error-text,
+.zpsajaxmodal.autohidelabels .resizablefield select + .error-text,
+.eventCalendar.table .filter.autohidelabels .resizablefield select + .error-text {
+  margin-top: -0.8em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L886 */
+.zp-form.zp14.autohidelabels .resizablefield.zpradio,
+.zp-shopform.autohidelabels .resizablefield.zpradio,
+.zpsajaxmodal.autohidelabels .resizablefield.zpradio,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpradio,
+.zp-form.zp14.autohidelabels .resizablefield.zpcheckbox,
+.zp-shopform.autohidelabels .resizablefield.zpcheckbox,
+.zpsajaxmodal.autohidelabels .resizablefield.zpcheckbox,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpcheckbox,
+.zp-form.zp14.autohidelabels .resizablefield.zpfile,
+.zp-shopform.autohidelabels .resizablefield.zpfile,
+.zpsajaxmodal.autohidelabels .resizablefield.zpfile,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpfile {
+  margin-bottom: 1em;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L888 */
+.zp-form.zp14.autohidelabels .resizablefield.zpradio label.field.default,
+.zp-shopform.autohidelabels .resizablefield.zpradio label.field.default,
+.zpsajaxmodal.autohidelabels .resizablefield.zpradio label.field.default,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpradio label.field.default,
+.zp-form.zp14.autohidelabels .resizablefield.zpcheckbox label.field.default,
+.zp-shopform.autohidelabels .resizablefield.zpcheckbox label.field.default,
+.zpsajaxmodal.autohidelabels .resizablefield.zpcheckbox label.field.default,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpcheckbox label.field.default,
+.zp-form.zp14.autohidelabels .resizablefield.zpfile label.field.default,
+.zp-shopform.autohidelabels .resizablefield.zpfile label.field.default,
+.zpsajaxmodal.autohidelabels .resizablefield.zpfile label.field.default,
+.eventCalendar.table .filter.autohidelabels .resizablefield.zpfile label.field.default {
+  margin-top: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L892 */
+.zp-form.zp14.autohidelabels .resizablefield label:not(.default),
+.zp-shopform.autohidelabels .resizablefield label:not(.default),
+.zpsajaxmodal.autohidelabels .resizablefield label:not(.default),
+.eventCalendar.table .filter.autohidelabels .resizablefield label:not(.default) {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 0.8em;
+  color: #333333;
+  opacity: 0.7;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  height: 1.2em;
+  overflow: hidden;
+  z-index: 2;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L908 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext,
+.zp-shopform.autohidelabels .resizablefield input.typetext,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext,
+.zp-form.zp14.autohidelabels .resizablefield select,
+.zp-shopform.autohidelabels .resizablefield select,
+.zpsajaxmodal.autohidelabels .resizablefield select,
+.eventCalendar.table .filter.autohidelabels .resizablefield select,
+.zp-form.zp14.autohidelabels .resizablefield textarea,
+.zp-shopform.autohidelabels .resizablefield textarea,
+.zpsajaxmodal.autohidelabels .resizablefield textarea,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea {
+  padding: 20px 15px 0 15px;
+  min-height: 3.6em;
+  height: auto;
+  line-height: 2.1;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L917 */
+.zp-form.zp14.autohidelabels .resizablefield select.zpmultilineselect,
+.zp-shopform.autohidelabels .resizablefield select.zpmultilineselect,
+.zpsajaxmodal.autohidelabels .resizablefield select.zpmultilineselect,
+.eventCalendar.table .filter.autohidelabels .resizablefield select.zpmultilineselect {
+  padding: 30px 15px 10px 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L920 */
+.zp-form.zp14.autohidelabels .resizablefield label.zpmultilineselect,
+.zp-shopform.autohidelabels .resizablefield label.zpmultilineselect,
+.zpsajaxmodal.autohidelabels .resizablefield label.zpmultilineselect,
+.eventCalendar.table .filter.autohidelabels .resizablefield label.zpmultilineselect {
+  background: #ffffff;
+  top: 3px;
+  padding-top: 10px;
+  height: calc(10px + 1.2em);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L926 */
+.zp-form.zp14.autohidelabels .resizablefield select.nolabel,
+.zp-shopform.autohidelabels .resizablefield select.nolabel,
+.zpsajaxmodal.autohidelabels .resizablefield select.nolabel,
+.eventCalendar.table .filter.autohidelabels .resizablefield select.nolabel {
+  min-height: 0;
+  padding: 5px 15px 5px 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L930 */
+.zp-form.zp14.autohidelabels .resizablefield textarea,
+.zp-shopform.autohidelabels .resizablefield textarea,
+.zpsajaxmodal.autohidelabels .resizablefield textarea,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea {
+  padding: 27px 15px 0 15px;
+  line-height: 1.4;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L934 */
+.zp-form.zp14.autohidelabels .resizablefield label.block,
+.zp-shopform.autohidelabels .resizablefield label.block,
+.zpsajaxmodal.autohidelabels .resizablefield label.block,
+.eventCalendar.table .filter.autohidelabels .resizablefield label.block {
+  display: block;
+  margin: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L937 */
+.zp-form.zp14.autohidelabels .resizablefield label.block:not(:only-of-type):last-of-type,
+.zp-shopform.autohidelabels .resizablefield label.block:not(:only-of-type):last-of-type,
+.zpsajaxmodal.autohidelabels .resizablefield label.block:not(:only-of-type):last-of-type,
+.eventCalendar.table .filter.autohidelabels .resizablefield label.block:not(:only-of-type):last-of-type {
+  margin: 0 0 1em 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L943 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L944 */
+.zp-form.zp14.autohidelabels .resizablefield.nolabel label,
+.zp-shopform.autohidelabels .resizablefield.nolabel label,
+.zpsajaxmodal.autohidelabels .resizablefield.nolabel label,
+.eventCalendar.table .filter.autohidelabels .resizablefield.nolabel label {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L947 */
+.zp-form.zp14.autohidelabels .resizablefield.nolabel input.typetext,
+.zp-shopform.autohidelabels .resizablefield.nolabel input.typetext,
+.zpsajaxmodal.autohidelabels .resizablefield.nolabel input.typetext,
+.eventCalendar.table .filter.autohidelabels .resizablefield.nolabel input.typetext {
+  padding: 10px 15px 10px 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L950 */
+.zp-form.zp14.autohidelabels .resizablefield.nolabel textarea,
+.zp-shopform.autohidelabels .resizablefield.nolabel textarea,
+.zpsajaxmodal.autohidelabels .resizablefield.nolabel textarea,
+.eventCalendar.table .filter.autohidelabels .resizablefield.nolabel textarea {
+  padding: 17px 15px 10px 15px;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L954 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext::-webkit-input-placeholder,
+.zp-shopform.autohidelabels .resizablefield input.typetext::-webkit-input-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext::-webkit-input-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext::-webkit-input-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L958 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext:-moz-placeholder,
+.zp-shopform.autohidelabels .resizablefield input.typetext:-moz-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext:-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext:-moz-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L962 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext::-moz-placeholder,
+.zp-shopform.autohidelabels .resizablefield input.typetext::-moz-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext::-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext::-moz-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L966 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext:-ms-input-placeholder,
+.zp-shopform.autohidelabels .resizablefield input.typetext:-ms-input-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext:-ms-input-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0.7);
+  /* opacity: 0.7; IE would apply the opacity to the field, not just the placeholder-text */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L970 */
+.zp-form.zp14.autohidelabels .resizablefield input.typetext::placeholder,
+.zp-shopform.autohidelabels .resizablefield input.typetext::placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield input.typetext::placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield input.typetext::placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L975 */
+.zp-form.zp14.autohidelabels .resizablefield textarea::-webkit-input-placeholder,
+.zp-shopform.autohidelabels .resizablefield textarea::-webkit-input-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield textarea::-webkit-input-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea::-webkit-input-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L979 */
+.zp-form.zp14.autohidelabels .resizablefield textarea:-moz-placeholder,
+.zp-shopform.autohidelabels .resizablefield textarea:-moz-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield textarea:-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea:-moz-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L983 */
+.zp-form.zp14.autohidelabels .resizablefield textarea::-moz-placeholder,
+.zp-shopform.autohidelabels .resizablefield textarea::-moz-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield textarea::-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea::-moz-placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L987 */
+.zp-form.zp14.autohidelabels .resizablefield textarea:-ms-input-placeholder,
+.zp-shopform.autohidelabels .resizablefield textarea:-ms-input-placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield textarea:-ms-input-placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0.7);
+  /* opacity: 0.7; IE would apply the opacity to the field, not just the placeholder-text */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L991 */
+.zp-form.zp14.autohidelabels .resizablefield textarea::placeholder,
+.zp-shopform.autohidelabels .resizablefield textarea::placeholder,
+.zpsajaxmodal.autohidelabels .resizablefield textarea::placeholder,
+.eventCalendar.table .filter.autohidelabels .resizablefield textarea::placeholder {
+  color: #333333;
+  opacity: 0.7;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L997 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L999 */
+.zp-form.zp14.autohidelabels:not(.placeholder) input.typetext::-webkit-input-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) input.typetext::-webkit-input-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) input.typetext::-webkit-input-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) input.typetext::-webkit-input-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1002 */
+.zp-form.zp14.autohidelabels:not(.placeholder) input.typetext:-moz-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) input.typetext:-moz-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) input.typetext:-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) input.typetext:-moz-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1005 */
+.zp-form.zp14.autohidelabels:not(.placeholder) input.typetext::-moz-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) input.typetext::-moz-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) input.typetext::-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) input.typetext::-moz-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1008 */
+.zp-form.zp14.autohidelabels:not(.placeholder) input.typetext:-ms-input-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) input.typetext:-ms-input-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) input.typetext:-ms-input-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) input.typetext:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0);
+  /* opacity: 0; IE would apply the opacity to the field, not just the placeholder-text */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1012 */
+.zp-form.zp14.autohidelabels:not(.placeholder) input.typetext::placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) input.typetext::placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) input.typetext::placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) input.typetext::placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1016 */
+.zp-form.zp14.autohidelabels:not(.placeholder) textarea::-webkit-input-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) textarea::-webkit-input-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) textarea::-webkit-input-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) textarea::-webkit-input-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1019 */
+.zp-form.zp14.autohidelabels:not(.placeholder) textarea:-moz-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) textarea:-moz-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) textarea:-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) textarea:-moz-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1022 */
+.zp-form.zp14.autohidelabels:not(.placeholder) textarea::-moz-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) textarea::-moz-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) textarea::-moz-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) textarea::-moz-placeholder {
+  opacity: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1025 */
+.zp-form.zp14.autohidelabels:not(.placeholder) textarea:-ms-input-placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) textarea:-ms-input-placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) textarea:-ms-input-placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) textarea:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0);
+  /* opacity: 0; IE would apply the opacity to the field, not just the placeholder-text */
+
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1029 */
+.zp-form.zp14.autohidelabels:not(.placeholder) textarea::placeholder,
+.zp-shopform.autohidelabels:not(.placeholder) textarea::placeholder,
+.zpsajaxmodal.autohidelabels:not(.placeholder) textarea::placeholder,
+.eventCalendar.table .filter.autohidelabels:not(.placeholder) textarea::placeholder {
+  opacity: 0;
+}
+/* Global helper classes */
+
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1038 */
+.zpclearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1043 */
+.cscroll::-webkit-scrollbar {
+  height: 10px !important;
+  width: 10px !important;
+  background: #C0C0C0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1048 */
+.cscroll::-webkit-scrollbar-thumb {
+  background: #888888;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1051 */
+.printonly {
+  display: none !important;
+}
+/* Global Print Styles */
+
+@media print {
+  @page {
+    margin: 1cm 2cm;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1059 */
+  body {
+    margin: 1cm 2cm;
+    max-width: 21cm !important;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+    background-color: #ffffff;
+    background-image: none;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1070 */
+  .printonly {
+    display: initial !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1072 */
+  .printonly.chromeprintwarning {
+    display: inline-block !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1076 */
+  .screenonly {
+    display: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1079 */
+  img.zplazyloading {
+    display: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1083 */
+  .zpContainer,
+  .zpBreakout,
+  .zpContainer.zpBreakout {
+    width: auto !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1092 */
+  div.zpRow {
+    margin-bottom: 0 !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1096 */
+  html,
+  body {
+    height: auto;
+    /* solves a problem with printing to pdf when height is 100% */
+  
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1099 */
+  body {
+    background: #ffffff;
+    color: black;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1102 */
+  body:before,
+  body:after {
+    content: none !important;
+  }
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1105 */
+  .zp13slider-control-nav zp13slider-control-paging,
+  .zp13slider-direction-nav,
+  .flex-control-nav,
+  .flex-direction-nav {
+    display: none !important;
+  }
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1115 */
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1117 */
+#content .zpContainer.styled .zpRow:last-child,
+.zpContainer.styled .zpRow:last-child {
+  margin-bottom: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1126 */
+a.xmenulink {
+  display: inline-block;
+  vertical-align: top;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1130 */
+i.zpextralang {
+  color: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-right: 0 !important;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1145 */
+i.zpextralang:after {
+  pointer-events: none;
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(50% - 0.35355em);
+  right: 1px;
+  height: 0.5em;
+  width: 0.5em;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1165 */
+select#zpextralang {
+  width: auto;
+  height: auto !important;
+  position: relative;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  text-shadow: inherit;
+  line-height: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  padding-right: calc(0.7071em + 5px);
+  background: transparent;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1194 */
+select#zpextralang option {
+  color: initial;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1198 */
+select#zpextralang::-ms-expand {
+  display: none;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1203 */
+video {
+  object-fit: cover;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1208 */
+@media screen and (max-width: 1024px) {
+  /* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1210 */
+  .touch .zpContainer.styled {
+    background-attachment: scroll !important;
+  }
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1219 */
+.zp-sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1230 */
+.zplazyloading {
+  position: relative;
+  opacity: 0.1;
+}
+/* C:\Users\silve\AppData\Local\Zeta Producer 15\packaging\layouts\_shared\assets\zpgrid.less:L1234 */
+.zplazyloaded {
+  -webkit-transition: opacity 600ms;
+  transition: opacity 600ms;
+  opacity: 1;
+}
