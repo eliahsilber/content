@@ -1,0 +1,6 @@
+Kurzlink: 		https://ogy.de/ipad-konv
+verweist auf: 		https://eliahsilber.github.io/content/ipad-website/index.html
+
+Deaktivierungslink: 	https://ogy.de/del/fbiq7gd2axq1cy8g21kf
+
+QR-Code generieren: 	https://ogy.de/ipad-konv+qr
